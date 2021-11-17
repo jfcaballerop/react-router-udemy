@@ -1,8 +1,7 @@
 import React, { useContext } from 'react'
 import {
 	BrowserRouter as Router,
-	Switch,
-	Route
+	Switch
 } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext'
 import Login from '../pages/Login'
