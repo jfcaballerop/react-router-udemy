@@ -1,11 +1,12 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 
 const Navbar = () => {
-	let navigate = useNavigate()
+	const history = useHistory();
 
 	const handleLogout = () => {
-		navigate("/login")
+		console.log(history);
+		history.replace("/login")
 	}
 	return (
 

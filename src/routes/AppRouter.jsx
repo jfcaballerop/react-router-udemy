@@ -1,8 +1,11 @@
 import React from 'react'
 import {
-	Route, Routes
+	Route,
+	Switch,
+	Redirect
 } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import CharactersScreen from '../pages/CharactersScreen'
 import ManScreen from '../pages/ManScreen'
 import SearchScreen from '../pages/SearchScreen'
 import WomanScreen from '../pages/WomanScreen'
@@ -11,11 +14,15 @@ const AppRouter = () => {
 	return (
 		<>
 			<Navbar></Navbar>
-			<Routes>
-				<Route exact path="/mans" element={<ManScreen />} />
-				<Route exact path="/womans" element={<WomanScreen />} />
-				<Route exact path="/search" element={<SearchScreen />} />
-			</Routes>
+			<Switch>
+				<Route exact path="/mans" component={ManScreen} />
+				<Route exact path="/womans" component={WomanScreen} />
+				<Route exact path="/search" component={SearchScreen} />
+				<Route exact path="/character/:id" component={CharactersScreen} />
+
+				{/* <Redirect to="/mans" /> */}
+
+			</Switch>
 		</>
 	)
 }

@@ -1,11 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
 
-const Login = (props) => {
-	let navigation = useNavigate()
+const Login = ({ history }) => {
 
 	const handleLogin = () => {
-		console.log(props)
+		// console.log(history)
+		history.push("/mans")
 	}
 	return (
 		<div className="container mr-5 text-center">

@@ -1,7 +1,7 @@
 import React from 'react'
 import {
 	BrowserRouter as Router,
-	Routes,
+	Switch,
 	Route
 } from 'react-router-dom'
 import Login from '../pages/Login'
@@ -11,9 +11,9 @@ const LoginRouter = () => {
 	return (
 		<Router>
 			<AppRouter></AppRouter>
-			<Routes>
-				<Route exact path="/login" element={<Login />} />
-			</Routes>
+			<Switch>
+				<Route exact path="/login" component={Login} />
+			</Switch>
 		</Router>
 
 	)

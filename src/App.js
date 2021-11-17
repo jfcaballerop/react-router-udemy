@@ -1,4 +1,3 @@
-import AppRouter from './routes/AppRouter';
 import LoginRouter from './routes/LoginRouter'
 function App() {
 	return (
