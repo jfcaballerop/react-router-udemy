@@ -20,7 +20,7 @@ const AppRouter = () => {
 				<Route exact path="/search" component={SearchScreen} />
 				<Route exact path="/character/:id" component={CharactersScreen} />
 
-				{/* <Redirect to="/mans" /> */}
+				<Redirect to="/mans" />
 
 			</Switch>
 		</>
